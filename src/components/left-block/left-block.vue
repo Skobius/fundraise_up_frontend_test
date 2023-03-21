@@ -1,5 +1,5 @@
 <template>
-    <div class="left-block">
+    <div class="left-block" style="height:1000px">
         Left Block
     </div>
 </template>
