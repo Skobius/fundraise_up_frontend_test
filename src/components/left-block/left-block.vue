@@ -1,12 +1,16 @@
 <template>
     <div class="left-block" style="height:1000px">
-        Left Block
+        <information-block></information-block>
+        <form-block></form-block>
     </div>
 </template>
 
 <style lang="scss" src="./left-block.scss"></style>
 
 <script>
+    import InformationBlock from '../left-block/information-block.vue'
+    import FormBlock from '../left-block/form-block.vue'
+
     export default {
         name: 'LeftBlock',
         props: {
@@ -16,6 +20,10 @@
             return {
                 
             }
+        },
+        components: {
+            InformationBlock,
+            FormBlock
         },
         methods: {
         }

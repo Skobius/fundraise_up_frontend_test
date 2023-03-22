@@ -1,7 +1,145 @@
 .left-block {
     width: 76.4%;
+    box-sizing: border-box;
+}
+
+.information-block {
+    width: 100%;
     border: 1px solid #DBDCDE;
     box-shadow: 1px 3px 3px rgba(62, 63, 64, 0.1);
     border-radius: 8px;
-    box-sizing: border-box;
+
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 24px 32px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 20px;
+        color: #2F2F30;
+
+        img {
+            margin-right: 8px;
+        }
+    }
+
+    &__cost {
+        margin-top: 3px;
+    }
+
+    &__usd {
+        font-size: 24px;
+        line-height: 32px;
+        color: #00A651;
+    }
+
+    &__eur {
+        font-size: 16px;
+        line-height: 24px;
+        color: #6C6D6F;
+        margin-left: 4px;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__id {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 16px;
+        line-height: 20px;
+        color: #919293;
+    }
+
+    &__number {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+        font-family: 'Source Code Pro', monospace;
+        font-size: 16px;
+        line-height: 24px;
+        color: #2F2F30;
+
+        img {
+            margin-left: 8px;
+        }
+    }
+
+    &__status {
+        display: flex;
+        flex-wrap: wrap;
+        background: #FAFAFA;
+        mix-blend-mode: normal;
+        border: 1px solid #DBDCDE;
+        border-radius: 0px 0px 8px 8px;
+        padding: 17px 31px 0;
+    }
+}
+
+.status-element {
+    margin-right: 30px;
+    padding-right: 17px;
+    border-right: 1px solid #D7D8DA;
+    margin-bottom: 17px;
+
+    &__name {
+        font-size: 14px;
+        line-height: 20px;
+        color: #6C6D6F;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        margin-top: 1px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #00A651;
+
+        img {
+            margin-right: 9px;
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration-line: underline;
+        color: #6665DD;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &:first-of-type {
+        padding-right: 13px;
+    }
+
+    &:last-of-type {
+        border-right: none;
+        margin-right: 0;
+    }
+}
+
+.form-block {
+    border: 1px solid #DBDCDE;
+    box-shadow: 1px 3px 3px rgba(62, 63, 64, 0.1);
+    border-radius: 8px;
+    margin-top: 24px;
+    padding: 24px 32px;
+}
+
+.fade {
+    display: none;
+}
+
+.show {
+    display: block;
 }

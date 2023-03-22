@@ -1,7 +1,7 @@
 <template>
     <div class="right-block">
         <div class="right-block__element" v-for="(item, i) in menu" :key="i">
-             <img :src="item.icon" alt="serch" class="right-block__element-image">
+             <img :src="item.icon" :alt="item.alt" class="right-block__element-image">
              <div class="right-block__element-text">{{item.name}}</div>
         </div>
     </div>
@@ -18,10 +18,10 @@
         data() {
             return {
                 menu: [
-                    { name: 'Change amount', icon: 'images/repeat.png' },
-                    { name: 'Change payment method', icon: 'images/wallet.png' },
-                    { name: 'Change date', icon: 'images/calendar.png' },
-                    { name: 'Cancel recurring', icon: 'images/x-circle.png' },
+                    { name: 'Change amount', icon: 'images/repeat.png', alt: 'repeat' },
+                    { name: 'Change payment method', icon: 'images/wallet.png', alt: 'wallet' },
+                    { name: 'Change date', icon: 'images/calendar.png', alt: 'calendar' },
+                    { name: 'Cancel recurring', icon: 'images/x-circle.png', alt: 'x-circle' },
                 ],
             }
         },

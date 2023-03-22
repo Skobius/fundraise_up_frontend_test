@@ -1,7 +1,7 @@
 <template>
     <div class="simple-select">
         <select name="simpleSelect" class="simple-select__inner">
-            <option :value="item.value" v-for="(item, i) in option" :key="i">item.name</option>
+            <option :value="item.value" v-for="(item, i) in option" :key="i">{{item.name}}</option>
         </select>
     </div>
 </template>
