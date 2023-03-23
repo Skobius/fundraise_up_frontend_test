@@ -3,7 +3,7 @@
 .header {
     max-width: 1224px;
     margin: 53px auto 0;
-    border: 1px solid #DBDCDE;
+    border: 1px solid $color-gray-second;
     box-shadow: 1px 3px 3px rgba(62, 63, 64, 0.1);
     border-radius: 8px;
     box-sizing: border-box;
@@ -11,7 +11,7 @@
     &__text {
         font-size: 24px;
         line-height: 32px;
-        color: #2F2F30;
+        color: $color-text;
         padding: 27px 31px;
         font-style: normal;
     }
@@ -19,7 +19,7 @@
     &__inner {
         background: #FAFAFA;
         mix-blend-mode: normal;
-        border: 1px solid #DBDCDE;
+        border: 1px solid $color-gray-second;
         border-radius: 0px 0px 8px 8px;
         padding: 16px 31px;
         display: flex;

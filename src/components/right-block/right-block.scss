@@ -3,7 +3,7 @@
 .right-block {
     width: 21.6%;
     margin-left: 2%;
-    border: 1px solid #DBDCDE;
+    border: 1px solid $color-gray-second;
     box-shadow: 1px 3px 3px rgba(62, 63, 64, 0.1);
     border-radius: 8px;
     box-sizing: border-box;
@@ -21,7 +21,7 @@
         display: flex;
         align-items: center;
         padding: 15.5px 15px;
-        border-bottom: 1px solid #DBDCDE; 
+        border-bottom: 1px solid $color-gray-second; 
         box-sizing: border-box;
         cursor: pointer;
 
@@ -36,7 +36,7 @@
         }
 
         &:hover {
-            background-color: #F3F3F3;
+            background-color: $color-gray;
         }
 
         &-image {

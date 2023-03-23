@@ -11,7 +11,7 @@
 			appearance: none;
 			height: 4px;
 			border-radius: 2px;
-			background: #DBDCDE;
+			background: $color-gray-second;
 			outline: none;
 			opacity: 1;
 			-webkit-transition: .2s;
@@ -27,7 +27,7 @@
 				appearance: none;
 				width: 18px;
 				height: 18px;
-				background: #2EB670;
+				background: $color-green-second;
 				cursor: pointer;
 				border-radius: 50%;
 				z-index: 2;
@@ -37,7 +37,7 @@
 			&::-moz-range-thumb {
 				width: 18px;
 				height: 18px;
-				background: #2EB670;
+				background: $color-green-second;
 				cursor: pointer;
 				border-radius: 50%;
 			}
@@ -49,7 +49,7 @@
 			height: 4px;
 			top: 11px;
 			left: 2px;
-			background: #2EB670;
+			background: $color-green-second;
 			border-radius: 2px;
 			z-index: 2;
 		}

@@ -11,7 +11,7 @@
 
 .information-block {
     width: 100%;
-    border: 1px solid #DBDCDE;
+    border: 1px solid $color-gray-second;
     box-shadow: 1px 3px 3px rgba(62, 63, 64, 0.1);
     border-radius: 8px;
 
@@ -31,7 +31,7 @@
         align-items: center;
         font-size: 14px;
         line-height: 20px;
-        color: #2F2F30;
+        color: $color-text;
 
         img {
             margin-right: 8px;
@@ -45,7 +45,7 @@
     &__usd {
         font-size: 24px;
         line-height: 32px;
-        color: #00A651;
+        color: $color-green;
     }
 
     &__eur {
@@ -74,7 +74,7 @@
         font-family: 'Source Code Pro', monospace;
         font-size: 16px;
         line-height: 24px;
-        color: #2F2F30;
+        color: $color-text;
 
         img {
             margin-left: 8px;
@@ -88,7 +88,7 @@
         flex-wrap: wrap;
         background: #FAFAFA;
         mix-blend-mode: normal;
-        border: 1px solid #DBDCDE;
+        border: 1px solid $color-gray-second;
         border-radius: 0px 0px 8px 8px;
         padding: 17px 31px 0;
 
@@ -120,7 +120,7 @@
         margin-top: 1px;
         font-size: 16px;
         line-height: 24px;
-        color: #00A651;
+        color: $color-green;
 
         img {
             margin-right: 9px;
@@ -132,7 +132,7 @@
         font-size: 16px;
         line-height: 24px;
         text-decoration-line: underline;
-        color: #6665DD;
+        color: $color-link;
 
         &:hover {
             text-decoration: none;

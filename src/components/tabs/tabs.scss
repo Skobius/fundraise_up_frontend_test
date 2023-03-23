@@ -9,7 +9,7 @@
     display: flex;
     margin-top: 7px;
     padding: 0 24px;
-    border-bottom: 1px solid #DBDCDE;
+    border-bottom: 1px solid $color-gray-second;
     box-sizing: border-box;
 
     &__item {
@@ -18,7 +18,7 @@
         line-height: 20px;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        color: #2F2F30;
+        color: $color-text;
         box-sizing: border-box;
         padding: 14px 16px 10px;
         margin-bottom: -1px;
@@ -26,9 +26,9 @@
         white-space: nowrap;
 
         &.active {
-            color: #00A651;
-            border: 1px solid #DBDCDE;
-            border-bottom: 1px solid #fff;
+            color: $color-green;
+            border: 1px solid $color-gray-second;
+            border-bottom: 1px solid $color-white;
             border-radius: 6px 6px 0px 0px;
         }
     }
