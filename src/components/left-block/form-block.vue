@@ -1,13 +1,15 @@
 <template>
     <form class="form-block">
-        <div class="tabs-menu">
-            <div
-                v-for="(tab, i) in tabs"
-                :key="i"
-                :class="['tabs-menu__item', { active: currentTab === tab.id }]"
-                @click="currentTab = tab.id"
-            >
-                {{ tab.name }}
+        <div class="tabs-menu-inner">
+            <div class="tabs-menu">
+                <div
+                    v-for="(tab, i) in tabs"
+                    :key="i"
+                    :class="['tabs-menu__item', { active: currentTab === tab.id }]"
+                    @click="currentTab = tab.id"
+                >
+                    {{ tab.name }}
+                </div>
             </div>
         </div>
         <component :is="currentTab" class="tab-content"></component>
