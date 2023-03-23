@@ -1,7 +1,14 @@
+@import "../app/var.scss";
+
 .main {
     max-width: 1224px;
-    margin: 23px auto 0;
+    margin: 23px auto 53px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+
+    @media only screen and (max-width: $media-mobile) {
+        flex-wrap: wrap-reverse;
+        margin-top: 0;
+    }
 }

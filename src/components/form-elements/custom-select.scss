@@ -1,0 +1,70 @@
+@import "../app/var.scss";
+
+.custom-select {
+    position: relative;
+    width: 100%;
+    max-width: 296px;
+    text-align: left;
+    outline: none;
+    height: 40px;
+    line-height: 47px;
+
+    & .selected {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        height: 40px;
+        border-radius: 6px;
+        border: 1px solid #A9ABAE;
+        box-sizing: border-box;
+        color: #fff;
+        padding-left: 11px;
+        cursor: pointer;
+        font-size: 16px;
+        color: #2F2F30;
+
+        &.open {
+            border: 1px solid #A9ABAE;
+            border-radius: 6px 6px 0px 0px;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            top: 15px;
+            right: 13px;
+            width: 4px;
+            height: 4px;
+            border: 2px solid #6C6D6F;
+            border-color: #6C6D6F #6C6D6F transparent transparent;
+            transform: rotate(135deg);
+        }
+    }
+
+    & .items {
+        color: #2F2F30;
+        border: 1px solid #A9ABAE;
+        border-radius: 0px 0px 6px 6px;
+        overflow: hidden;
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        div {
+            color: #2F2F30;
+            padding-left: 1em;
+            cursor: pointer;
+            user-select: none;
+
+            &:hover {
+                background-color: #F3F3F3;
+            }
+        }
+    }
+}
+  
+.selectHide {
+    display: none;
+}

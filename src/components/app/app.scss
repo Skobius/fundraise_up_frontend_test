@@ -1,3 +1,9 @@
+@import "../app/var.scss";
+
 body {
   font-family: 'Work Sans', sans-serif;
+}
+
+.todo-app {
+  min-width: 290px;
 }

@@ -1,11 +1,12 @@
 <template>
-    <div class="left-block" style="height:1000px">
+    <div class="left-block">
         <information-block></information-block>
         <form-block></form-block>
     </div>
 </template>
 
 <style lang="scss" src="./left-block.scss"></style>
+
 
 <script>
     import InformationBlock from '../left-block/information-block.vue'

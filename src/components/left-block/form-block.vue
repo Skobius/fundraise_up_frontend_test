@@ -1,35 +1,52 @@
 <template>
     <form class="form-block">
-        <ul class="nav nav-tabs nav-justified">
-            <li class="nav-item" v-for="(item, i) in tabs" :key="i">
-                <a class="nav-link" @click.prevent="setActive(item.id)" :class="{ active: isActive(item.id) }" :href="'#' + item.id" >{{item.name}}</a>
-            </li>
-        </ul>
-        <div class="tab-content py-3" id="myTabContent">
-            <div class="tab-pane fade" :class="{ 'active show': isActive(item.id) }" :id="item.id" v-for="(item, i) in tabs" :key="i"><slot>{{item.content}}</slot></div>
+        <div class="tabs-menu">
+            <div
+                v-for="(tab, i) in tabs"
+                :key="i"
+                :class="['tabs-menu__item', { active: currentTab === tab.id }]"
+                @click="currentTab = tab.id"
+            >
+                {{ tab.name }}
+            </div>
+        </div>
+        <component :is="currentTab" class="tab-content"></component>
+        <div class="form-block__footer">
+            <button class="btn btn--success">Save changes</button>
+            <button class="btn btn--default">Cancel</button>
         </div>
     </form>
 </template>
 
 <script>
-    import BehaviorBlock from '../tabs/behavior.vue'
+    import behavior from '../tabs/behavior.vue'
+    import appearance from '../tabs/appearance.vue'
+    import custom from '../tabs/custom.vue'
+    import questions from '../tabs/questions.vue'
+    import url from '../tabs/url.vue'
 
     export default {
-        name: 'Infrormation-block',
+        name: 'InfrormationBlock',
         props: {
         },
         data() {
             return {
-                activeItem: 'behavior',
+                currentTab: 'behavior',
                 tabs: [
-                    {name: 'Behavior', id: 'behavior', content: 'Behavior content'},
-                    {name: 'Appearance', id: 'appearance', content: 'Appearance content'},
-                    {name: 'Custom Fields', id: 'custom', content: 'Custom Fields content'},
+                    {name: 'Behavior', id: 'behavior'},
+                    {name: 'Appearance', id: 'appearance'},
+                    {name: 'Custom Fields', id: 'custom'},
+                    {name: 'Questions', id: 'questions'},
+                    {name: 'URL Control', id: 'url'},
                 ]
             }
         },
         components: {
-            BehaviorBlock
+            behavior,
+            appearance,
+            custom,
+            questions,
+            url
         },
         methods: {
             isActive (menuItem) {

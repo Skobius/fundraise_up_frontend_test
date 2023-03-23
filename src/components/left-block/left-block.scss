@@ -1,6 +1,12 @@
+@import "../app/var.scss";
+
 .left-block {
     width: 76.4%;
     box-sizing: border-box;
+
+    @media only screen and (max-width: $media-mobile) {
+        width: 100%;
+    }
 }
 
 .information-block {
@@ -14,6 +20,10 @@
         align-items: flex-start;
         justify-content: space-between;
         padding: 24px 32px;
+
+        @media only screen and (max-width: $media-mobile) {
+            flex-direction: column;
+        }   
     }
 
     &__header {
@@ -68,6 +78,7 @@
 
         img {
             margin-left: 8px;
+            cursor: pointer;
         }
     }
 
@@ -79,14 +90,22 @@
         border: 1px solid #DBDCDE;
         border-radius: 0px 0px 8px 8px;
         padding: 17px 31px 0;
+
+        @media only screen and (max-width: $media-mobile) {
+            flex-direction: column;
+        }
     }
 }
 
 .status-element {
     margin-right: 30px;
-    padding-right: 17px;
+    padding-right: 33px;
     border-right: 1px solid #D7D8DA;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
+
+    @media only screen and (max-width: $media-mobile) {
+        border-right: none;
+    }
 
     &__name {
         font-size: 14px;
@@ -128,18 +147,49 @@
     }
 }
 
-.form-block {
-    border: 1px solid #DBDCDE;
-    box-shadow: 1px 3px 3px rgba(62, 63, 64, 0.1);
-    border-radius: 8px;
-    margin-top: 24px;
-    padding: 24px 32px;
-}
-
 .fade {
     display: none;
 }
 
 .show {
     display: block;
+}
+
+.tabs-menu {
+    display: flex;
+    margin-top: 7px;
+    padding: 0 24px;
+    border-bottom: 1px solid #DBDCDE;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    &__item {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #2F2F30;
+        box-sizing: border-box;
+        padding: 14px 16px 10px;
+        margin-bottom: -1px;
+        cursor: pointer;
+        white-space: nowrap;
+
+        &.active {
+            color: #00A651;
+            border: 1px solid #DBDCDE;
+            border-bottom: 1px solid #fff;
+            border-radius: 6px 6px 0px 0px;
+        }
+    }
+}
+
+.tab-content {
+    padding: 40px 60px;
+
+    @media only screen and (max-width: $media-mobile) {
+        padding: 20px;
+    }
 }

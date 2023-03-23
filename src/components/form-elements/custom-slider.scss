@@ -1,0 +1,57 @@
+@import "../app/var.scss";
+
+.slider-component {
+	.slidecontainer {
+		position: relative;
+		z-index: 3;
+		width: 100%;
+
+		.slider {
+			-webkit-appearance: none;
+			appearance: none;
+			height: 4px;
+			border-radius: 2px;
+			background: #DBDCDE;
+			outline: none;
+			opacity: 1;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+			width: 214px;
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				appearance: none;
+				width: 18px;
+				height: 18px;
+				background: #2EB670;
+				cursor: pointer;
+				border-radius: 50%;
+				z-index: 2;
+				opacity: 1;
+			}
+
+			&::-moz-range-thumb {
+				width: 18px;
+				height: 18px;
+				background: #2EB670;
+				cursor: pointer;
+				border-radius: 50%;
+			}
+		}
+
+		.slidersucces {
+			display: block;
+			position: absolute;
+			height: 4px;
+			top: 11px;
+			left: 2px;
+			background: #2EB670;
+			border-radius: 2px;
+			z-index: 2;
+		}
+	}
+}
